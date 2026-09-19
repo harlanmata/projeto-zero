@@ -1,0 +1,8 @@
+{
+  "name":"wprinter-assistente-tecnico-web",
+  "version":"1.0.0",
+  "private":true,
+  "scripts":{"dev":"tsx watch src/server.ts","build":"tsc","start":"node dist/server.js"},
+  "dependencies":{"better-sqlite3":"^11.10.0","ejs":"^3.1.10","express":"^5.1.0","multer":"^2.0.2","xlsx":"^0.18.5"},
+  "devDependencies":{"@types/ejs":"^3.1.5","@types/express":"^5.0.3","@types/multer":"^2.0.0","@types/node":"^24.3.1","tsx":"^4.20.5","typescript":"^5.9.2"}
+}

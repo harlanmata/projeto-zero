@@ -1,0 +1,3 @@
+import {Router} from 'express'; import multer from 'multer'; import path from 'node:path'; import fs from 'node:fs'; import {TechController} from '../controllers/TechController';
+const uploadDir=path.join(process.cwd(),'data','uploads'); fs.mkdirSync(uploadDir,{recursive:true}); const upload=multer({dest:uploadDir});
+const r=Router(); r.get('/',TechController.home); r.get('/erro/:id',TechController.detail); r.get('/admin',TechController.admin); r.post('/admin/erro',TechController.saveError); r.post('/admin/erro/:id/excluir',TechController.deleteError); r.post('/admin/importar',upload.single('arquivo'),TechController.import); r.get('/admin/exportar',TechController.export); export default r;
